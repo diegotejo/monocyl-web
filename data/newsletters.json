@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Boletín de Bienvenida 2026",
+    "date": "2026-01-10",
+    "excerpt": "¡Bienvenidos al nuevo año con MONOCYL! Resumen de las próximas actividades y talleres para familias.",
+    "link": "#",
+    "coverImage": "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    "id": 2,
+    "title": "Taller de Crianza Positiva",
+    "date": "2026-02-15",
+    "excerpt": "Información detallada sobre nuestro exitoso taller de crianza, recursos y las próximas fechas disponibles.",
+    "link": "#",
+    "coverImage": "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=600&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "Ayudas y Subvenciones JCyL",
+    "date": "2026-03-05",
+    "excerpt": "Actualización importante sobre las nuevas ayudas publicadas por la Junta de Castilla y León para familias monoparentales.",
+    "link": "#",
+    "coverImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+  }
+]
