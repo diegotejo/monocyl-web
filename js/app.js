@@ -73,11 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('article');
             card.classList.add('newsletter-card');
 
-            // Setting a fallback image if coverImage is not provided
-            const bgImage = newsletter.coverImage || 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=600&auto=format&fit=crop';
+            // Setting logo as fallback image when coverImage is not provided
+            const bgImage = newsletter.coverImage || 'logo.png';
+            const bgStyle = newsletter.coverImage
+                ? `background-image: url('${bgImage}'); background-size: cover; background-position: center;`
+                : `background-image: url('${bgImage}'); background-size: 55%; background-repeat: no-repeat; background-position: center; background-color: #F5EAE1;`;
 
             card.innerHTML = `
-                <div class="card-image" style="background-image: url('${bgImage}')" aria-hidden="true"></div>
+                <div class="card-image" style="${bgStyle}" aria-hidden="true"></div>
                 <div class="card-content">
                     <span class="card-date">${formatDate(newsletter.date)}</span>
                     <h3 class="card-title">${newsletter.title}</h3>
