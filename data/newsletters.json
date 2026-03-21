@@ -1,26 +1,82 @@
 [
   {
-    "id": 1,
-    "title": "Boletín de Bienvenida 2026",
-    "date": "2026-01-10",
-    "excerpt": "¡Bienvenidos al nuevo año con MONOCYL! Resumen de las próximas actividades y talleres para familias.",
-    "link": "#",
-    "coverImage": "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop"
+    "id": 10,
+    "title": "Boletín Marzo 2026",
+    "date": "2026-03-01",
+    "excerpt": "Novedades y actividades para el mes de marzo en MONOCYL Valladolid.",
+    "link": "pdfs/boletines/03.BOLETIN MONOCYL MARZO 26.pdf",
+    "coverImage": ""
   },
   {
-    "id": 2,
-    "title": "Taller de Crianza Positiva",
-    "date": "2026-02-15",
-    "excerpt": "Información detallada sobre nuestro exitoso taller de crianza, recursos y las próximas fechas disponibles.",
-    "link": "#",
-    "coverImage": "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?q=80&w=600&auto=format&fit=crop"
+    "id": 9,
+    "title": "Boletín Enero-Febrero 2026",
+    "date": "2026-02-01",
+    "excerpt": "Resumen de inicio de año y actividades conjuntas para los meses de enero y febrero.",
+    "link": "pdfs/boletines/01y02.BOLETIN MONOCYL ENERO-FEBRERO 26.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 8,
+    "title": "Boletín Diciembre 2025",
+    "date": "2025-12-01",
+    "excerpt": "Cierre de año, celebraciones y planificación para 2026.",
+    "link": "pdfs/boletines/12.BOLETIN MONOCYL DICIEMBRE 25.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 7,
+    "title": "Boletín Noviembre 2025",
+    "date": "2025-11-01",
+    "excerpt": "Actividades de otoño y nuevos recursos para familias monoparentales.",
+    "link": "pdfs/boletines/11.BOLETIN MONOCYL NOVIEMBRE 25.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 6,
+    "title": "Boletín Octubre 2025",
+    "date": "2025-10-01",
+    "excerpt": "Talleres y encuentros previstos para el mes de octubre.",
+    "link": "pdfs/boletines/10.BOLETIN MONOCYL OCTUBRE 25.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 5,
+    "title": "Boletín Septiembre 2025",
+    "date": "2025-09-01",
+    "excerpt": "Vuelta al cole y reactivación de los grupos de apoyo.",
+    "link": "pdfs/boletines/09.BOLETIN MONOCYL SEPTIEMBRE 25.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 4,
+    "title": "Boletín Julio 2025",
+    "date": "2025-07-01",
+    "excerpt": "Actividades de verano y consejos para la conciliación estival.",
+    "link": "pdfs/boletines/07.BOLETIN MONOCYL JULIO 25.pdf",
+    "coverImage": ""
   },
   {
     "id": 3,
-    "title": "Ayudas y Subvenciones JCyL",
-    "date": "2026-03-05",
-    "excerpt": "Actualización importante sobre las nuevas ayudas publicadas por la Junta de Castilla y León para familias monoparentales.",
-    "link": "#",
-    "coverImage": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop"
+    "title": "Boletín Junio 2025 (Edición Especial)",
+    "date": "2025-06-15",
+    "excerpt": "Actualización de contenidos y eventos especiales de final de curso.",
+    "link": "pdfs/boletines/06b.BOLETIN MONOCYL JUNIO 25 2.0.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 2,
+    "title": "Boletín Junio 2025",
+    "date": "2025-06-01",
+    "excerpt": "Planificación de actividades para el mes de junio.",
+    "link": "pdfs/boletines/06.BOLETIN MONOCYL JUNIO 25.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 1,
+    "title": "Boletín Mayo 2025",
+    "date": "2025-05-01",
+    "excerpt": "Lanzamiento del boletín mensual de MONOCYL Valladolid.",
+    "link": "pdfs/boletines/05.BOLETIN MONOCYL MAYO 25.pdf",
+    "coverImage": ""
   }
 ]

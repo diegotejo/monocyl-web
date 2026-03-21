@@ -942,3 +942,62 @@ h1, h2, h3, h4 {
         font-size: 1.2rem;
     }
 }
+
+/* ==========================================================================
+   Gallery Section
+   ========================================================================== */
+.gallery-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    height: 420px;
+    gap: 4px;
+}
+
+.gallery-item {
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item--drawing {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fff7f0;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        height: 320px;
+    }
+
+    .gallery-item:last-child {
+        grid-column: 1 / -1;
+        height: 200px;
+    }
+}
+
+/* ==========================================================================
+   TikTok Social Link
+   ========================================================================== */
+.social-tiktok {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: 1.1rem;
+    color: inherit;
+    text-decoration: none;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONOCYL | Asociación de Familias Monoparentales de Castilla y León</title>
+    <meta name="description" content="Acompañando, informando y creando red con las familias monoparentales de Castilla y León.">
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon (using logo for now) -->
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <span class="logo-mono">MONO</span><span class="logo-cyl">cyl</span>
+                <span class="logo-sub">Castilla y León</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#servicios">Qué hacemos</a>
+                <a href="#boletines">Boletines</a>
+                <a href="#contacto" class="btn-primary">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>No estás <span class="text-highlight">sol@</span> en la crianza</h1>
+                <p>Somos la red de apoyo para familias monoparentales de Castilla y León. Un espacio de encuentro, información y defensa de nuestros derechos.</p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn-primary btn-large">Únete a la red</a>
+                    <a href="#nosotros" class="btn-secondary btn-large">Saber más</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder" style="background-image: url('img/hero.png')"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="about">
+        <div class="container about-grid">
+            <div class="about-image">
+                <div class="image-placeholder-soft" style="background-image: url('img/monocyl_web_pro.jpg')"></div>
+            </div>
+            <div class="about-text">
+                <div class="section-header" style="text-align: left;">
+                    <div class="underline" style="margin: 0 0 1rem 0;"></div>
+                    <h2>Quiénes Somos</h2>
+                </div>
+                <p class="lead-text">MONOCYL es la Asociación de Familias Monoparentales de Castilla y León, una red de apoyo, información y defensa de derechos para todas nuestras familias.</p>
+                <p>Nacemos con el objetivo de dar visibilidad a nuestro modelo de familia y trabajar por la igualdad real de oportunidades para nuestros hijos e hijas.</p>
+                <ul class="about-list">
+                    <li><i data-lucide="check"></i> <span>Acompañamiento y orientación personalizada.</span></li>
+                    <li><i data-lucide="check"></i> <span>Incidencia política para el reconocimiento jurídico.</span></li>
+                    <li><i data-lucide="check"></i> <span>Espacio de respiro y ocio compartido.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="underline"></div>
+                <h2>¿Qué Hacemos?</h2>
+                <p>Trabajamos cada día para ofrecer recursos y apoyo a todas las familias monoparentales de nuestra comunidad.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="info"></i></div>
+                    <h3>Información y Ayudas</h3>
+                    <p>Orientación sobre prestaciones sociales, becas y derechos específicos para familias monoparentales.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="users"></i></div>
+                    <h3>Grupos de Apoyo</h3>
+                    <p>Círculos de confianza donde compartir experiencias y crear redes de apoyo mutuo genuinas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="graduation-cap"></i></div>
+                    <h3>Talleres y Cursos</h3>
+                    <p>Formación en crianza, autocuidado, empleabilidad y herramientas de conciliación.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="heart"></i></div>
+                    <h3>Ocio en Familia</h3>
+                    <p>Actividades culturales y recreativas diseñadas para que grandes y pequeños disfruten juntos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            <div class="gallery-item" style="background-image: url('img/monocyl_group2_web.jpg')" role="img" aria-label="Grupo de socias de MONOCYL"></div>
+            <div class="gallery-item gallery-item--drawing" style="background-image: url('img/dibujos.jpeg')" role="img" aria-label="Dibujo de niña sobre MONOCYL"></div>
+            <div class="gallery-item" style="background-image: url('img/monocyl_event_web.jpg')" role="img" aria-label="Evento de MONOCYL"></div>
+        </div>
+    </section>
+
+    <!-- Importance Section -->
+    <section class="importance">
+        <div class="container">
+            <div class="importance-text">
+                <p>Porque una familia <span class="text-highlight">monoparental</span> es una familia con plenos derechos, no una familia incompleta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletters Section -->
+    <section id="boletines" class="newsletters-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="underline"></div>
+                <h2>Boletines Mensuales</h2>
+                <p>Mantente al día con nuestras actividades, noticias y recursos compartidos mes a mes.</p>
+            </div>
+            
+            <div id="newsletters-grid" class="newsletters-grid">
+                <!-- Data will be loaded via JS -->
+                <div class="loading" style="grid-column: 1/-1; text-align: center; padding: 3rem;">
+                    <p>Cargando boletines...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <h2>Participa en MONOCYL</h2>
+            <p>Juntas somos más fuertes. Únete a nuestra asociación y ayúdanos a crecer.</p>
+            
+            <div class="cta-cards">
+                <div class="cta-card">
+                    <i data-lucide="user-plus"></i>
+                    <h3>Hazte Socia</h3>
+                </div>
+                <div class="cta-card">
+                    <i data-lucide="mail"></i>
+                    <h3>Suscríbete</h3>
+                </div>
+                <div class="cta-card">
+                    <i data-lucide="share-2"></i>
+                    <h3>Difunde</h3>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary btn-large">Formulario de registro</a>
+                <a href="#contacto" class="btn-secondary btn-large">Contactar directamente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-mono">MONO</span><span class="logo-cyl">cyl</span>
+                    </a>
+                    <p>Asociación de Familias Monoparentales de Castilla y León. Trabajando por la visibilidad y el apoyo mutuo.</p>
+                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
+                        <a href="https://www.facebook.com/MonoCyL/" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="https://x.com/monocyl" target="_blank" rel="noopener" aria-label="X (Twitter)"><i data-lucide="twitter"></i></a>
+                        <a href="https://www.instagram.com/monocyl/" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.tiktok.com/@monocyl11" target="_blank" rel="noopener" aria-label="TikTok" class="social-tiktok">&#9835;</a>
+                    </div>
+                </div>
+                
+                <div class="contact-area">
+                    <h3 style="color: #fff; margin-bottom: 1.5rem;">Contacto</h3>
+                    <div class="contact-info">
+                        <a href="mailto:monocyl@hotmail.com" class="contact-link">
+                            <i data-lucide="mail"></i>
+                            <span>monocyl@hotmail.com</span>
+                        </a>
+                        <a href="tel:+34625790471" class="contact-link">
+                            <i data-lucide="phone"></i>
+                            <span>(+34) 625 790 471</span>
+                        </a>
+                        <a href="tel:+34620563068" class="contact-link">
+                            <i data-lucide="phone"></i>
+                            <span>(+34) 620 563 068</span>
+                        </a>
+                        <div class="contact-link">
+                            <i data-lucide="map-pin"></i>
+                            <span>C/ Bretón de los Herreros, 8 · Villardefrades (Valladolid)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 3rem; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+                <p>&copy; 2026 MONOCYL · Asociación de Familias Monoparentales de Castilla y León. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- App Logic -->
+    <script src="js/app.js"></script>
+</body>
+</html>
