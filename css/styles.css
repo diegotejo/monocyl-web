@@ -363,6 +363,57 @@ h1, h2, h3, h4 {
     gap: 1.2rem;
 }
 
+/* Identity Block inside Hero */
+.identity-block {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: var(--radius-md);
+    border-left: 6px solid var(--clr-yellow);
+    max-width: 600px;
+}
+
+.identity-intro {
+    font-weight: 700;
+    color: var(--clr-purple) !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.1rem !important;
+}
+
+.identity-list {
+    margin-bottom: 1rem;
+}
+
+.identity-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    color: var(--clr-text-main);
+}
+
+.identity-list li i {
+    color: var(--clr-purple);
+    flex-shrink: 0;
+}
+
+.identity-list li strong {
+    color: var(--clr-purple);
+    font-weight: 800;
+}
+
+.hashtag {
+    font-size: 1.4rem !important;
+    font-weight: 800;
+    color: var(--clr-purple) !important;
+    margin: 0 !important;
+    display: inline-block;
+    padding: 0 8px;
+    background: linear-gradient(180deg, transparent 65%, var(--clr-yellow-light) 65%);
+}
+
 .image-placeholder {
     width: 100%;
     aspect-ratio: 4/4;
