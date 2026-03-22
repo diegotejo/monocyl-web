@@ -155,4 +155,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize
     fetchNewsletters();
     fetchEvents();
+    fetchMemorias();
+
+    // 3. Fetch and Render Memorias
+    async function fetchMemorias() {
+        const memoriasGrid = document.getElementById('memorias-grid');
+        if (!memoriasGrid) return;
+
+        try {
+            const response = await fetch('data/memorias.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const memorias = await response.json();
+            renderMemorias(memorias, memoriasGrid);
+        } catch (error) {
+            console.error('Error fetching memorias:', error);
+            memoriasGrid.innerHTML = `<div class="error-state"><p>No se pudieron cargar las memorias.</p></div>`;
+        }
+    }
+
+    function renderMemorias(memorias, container) {
+        container.innerHTML = '';
+        if (memorias.length === 0) {
+            container.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">No hay memorias disponibles.</p>';
+            return;
+        }
+
+        memorias.forEach(memoria => {
+            const card = document.createElement('article');
+            card.classList.add('newsletter-card', 'memoria-card');
+
+            // Creating a special background for Memorias: Logo + Year text
+            // We use a CSS layout for this in the card innerHTML
+            card.innerHTML = `
+                <div class="card-image memoria-image" aria-hidden="true">
+                    <img src="logo.png" alt="" class="memoria-logo-small">
+                    <div class="memoria-year-label">MEMORIA DE ACTIVIDAD<br><span>${memoria.year}</span></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-date">${formatDate(memoria.date)}</span>
+                    <h3 class="card-title">${memoria.title}</h3>
+                    <p class="card-excerpt">${memoria.excerpt}</p>
+                    <a href="${memoria.link}" target="_blank" class="read-more" aria-label="Leer ${memoria.title}">Leer Memoria</a>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
 });

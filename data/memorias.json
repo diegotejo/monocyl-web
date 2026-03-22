@@ -1,0 +1,18 @@
+[
+  {
+    "id": "memoria-2025",
+    "year": "2025",
+    "title": "Memoria de Actividad 2025",
+    "excerpt": "Resumen detallado de todas las acciones, talleres y logros de MONOCYL durante el año 2025.",
+    "link": "pdfs/documentos/Memoria Actividad 2025.pdf",
+    "date": "2026-01-01"
+  },
+  {
+    "id": "memoria-2024",
+    "year": "2024",
+    "title": "Memoria de Actividad 2024",
+    "excerpt": "Crónica de nuestro crecimiento y actividades realizadas en beneficio de las familias de Castilla y León durante 2024.",
+    "link": "pdfs/documentos/MEMORIA ACTIVIDAD 2024.pdf",
+    "date": "2025-01-10"
+  }
+]

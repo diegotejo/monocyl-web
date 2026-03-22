@@ -1275,3 +1275,55 @@ h1, h2, h3, h4 {
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   Memorias de Actividad Section
+   ========================================================================== */
+.memorias-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--clr-bg-alt); /* Warmer Sandy Beige for differentiation */
+}
+
+.memoria-card {
+    border-color: rgba(99, 45, 98, 0.15);
+}
+
+.memoria-image {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    position: relative;
+    border-bottom: 4px solid var(--clr-purple);
+}
+
+.memoria-logo-small {
+    width: 60px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.memoria-year-label {
+    text-align: center;
+    font-weight: 800;
+    color: var(--clr-purple);
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+.memoria-year-label span {
+    font-size: 2.2rem;
+    color: var(--clr-text-main);
+    display: block;
+    margin-top: 2px;
+}
+
+.memoria-card:hover .memoria-year-label span {
+    color: var(--clr-purple);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
