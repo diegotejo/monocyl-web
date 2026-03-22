@@ -18,6 +18,44 @@
     <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
+    <!-- News Trigger Bar (Hidden by default, shown by JS) -->
+    <div id="news-trigger-container" class="news-trigger-container hidden">
+        <button id="news-trigger-btn" class="news-trigger-btn">
+            <span class="pulse"></span>
+            <i data-lucide="sparkles"></i>
+            <span id="news-trigger-text">Próxima actividad: 18 de Abril</span>
+        </button>
+    </div>
+
+    <!-- News Overlay / Modal -->
+    <div id="news-overlay" class="news-overlay">
+        <div class="news-modal">
+            <button id="close-news" class="close-news" aria-label="Cerrar"><i data-lucide="x"></i></button>
+            <div class="news-content-grid">
+                <div class="news-image-container">
+                    <img id="news-image" src="" alt="Cartel del evento">
+                </div>
+                <div class="news-details">
+                    <div class="news-badge">PRÓXIMAMENTE</div>
+                    <h2 id="news-title"></h2>
+                    <h3 id="news-subtitle"></h3>
+                    <div class="news-info-list">
+                        <div class="news-info-item">
+                            <i data-lucide="calendar"></i>
+                            <span id="news-date"></span>
+                        </div>
+                        <div class="news-info-item">
+                            <i data-lucide="map-pin"></i>
+                            <span id="news-location"></span>
+                        </div>
+                    </div>
+                    <p id="news-description"></p>
+                    <a id="news-link" href="#" class="btn-primary w-100"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-content">
