@@ -531,10 +531,10 @@ h1, h2, h3, h4 {
 
 .image-placeholder-soft {
     width: 100%;
-    aspect-ratio: 4/4.5;
+    aspect-ratio: 16 / 10; /* More landscape to show the group better */
     border-radius: var(--radius-lg);
     background-size: cover;
-    background-position: center;
+    background-position: center 20%; /* Slight adjustment if needed to favor faces */
     box-shadow: var(--shadow-md);
     position: relative;
 }
