@@ -76,10 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('news-description').textContent = event.description;
         document.getElementById('news-image').src = event.image || 'logo.png';
         
-        const link = document.getElementById('news-link');
-        link.href = event.link;
-        link.textContent = event.linkText || 'Más información';
-
         document.getElementById('news-trigger-text').textContent = `Próxima actividad: ${formatDateShort(event.date)}`;
         
         newsTrigger.classList.remove('hidden');

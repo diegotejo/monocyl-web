@@ -1176,16 +1176,17 @@ h1, h2, h3, h4 {
 
 .news-content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 400px 1fr;
     gap: 0;
 }
 
 .news-image-container {
-    background: #000;
+    background: #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    min-height: 500px;
 }
 
 .news-image-container img {
