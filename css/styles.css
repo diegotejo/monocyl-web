@@ -363,15 +363,54 @@ h1, h2, h3, h4 {
     gap: 1.2rem;
 }
 
-/* Identity Block inside Hero */
+/* New Identity Block over Image positioning */
+.hero-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 500px;
+    border-radius: 40px 120px 40px 40px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 8px solid var(--clr-surface);
+}
+
+/* Image Background with effects */
+.image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35; /* Low opacity as requested */
+    filter: blur(5px); /* Small blur as requested */
+    z-index: 1;
+}
+
+/* Matte gradient overlay to lose texture */
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(250, 246, 240, 0.8) 0%, rgba(250, 246, 240, 0.4) 100%);
+    z-index: 2;
+}
+
 .identity-block {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(5px);
-    border-radius: var(--radius-md);
-    border-left: 6px solid var(--clr-yellow);
-    max-width: 600px;
+    position: relative;
+    z-index: 3; /* Above image and overlay */
+    margin: 0;
+    padding: 2rem;
+    background: transparent;
+    border: none;
+    max-width: 100%;
 }
 
 .identity-intro {
@@ -414,16 +453,7 @@ h1, h2, h3, h4 {
     background: linear-gradient(180deg, transparent 65%, var(--clr-yellow-light) 65%);
 }
 
-.image-placeholder {
-    width: 100%;
-    aspect-ratio: 4/4;
-    border-radius: 40px 120px 40px 40px;
-    box-shadow: var(--shadow-lg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border: 8px solid var(--clr-surface);
-}
+/* Image placeholder is now positioned absolutely within .hero-image */
 
 /* Playful yellow decoration on hero image */
 .image-placeholder::before {
@@ -935,20 +965,37 @@ h1, h2, h3, h4 {
         padding-bottom: 4rem;
     }
 
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
     .hero-text {
         text-align: center;
+        display: contents; /* Allows children to be reordered via order */
     }
 
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        order: 1;
     }
 
     .hero-text p {
-        margin: 0 auto var(--spacing-md);
+        margin: 0 auto var(--spacing-sm);
+        order: 2;
+    }
+
+    .hero-image {
+        order: 3; /* Merged frame goes between text and buttons */
+        min-height: 400px;
+        padding: 1.5rem;
     }
 
     .hero-buttons {
+        order: 4; /* Buttons at the very bottom */
         justify-content: center;
+        margin-top: 1rem;
     }
     
     .about-visual {
