@@ -844,6 +844,12 @@ h1, h2, h3, h4 {
     margin-bottom: var(--spacing-sm);
 }
 
+.footer-logo-img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
 .footer-logo .logo-mono {
     color: #fff;
 }
