@@ -1,0 +1,123 @@
+﻿
+    <link 
+rel="preconnect" href="htt
+ps://fonts.googleapis.com"
+>
+    <link 
+rel="preconnect" href="htt
+ps://fonts.gstatic.com" 
+crossorigin>
+    <link href="https://fo
+nts.googleapis.com/css2?fa
+mily=Outfit:wght@300;400;5
+00;600;700&display=swap" 
+rel="stylesheet">
+    <link 
+rel="stylesheet" 
+href="css/styles.css">
+    <link rel="icon" 
+type="image/png" 
+href="logo.png">
+            <button 
+id="close-news" 
+class="close-news" 
+aria-label="Cerrar"><i dat
+a-lucide="x"></i></button>
+            <a href="#" 
+class="logo">
+            <button 
+class="mobile-menu-btn" 
+id="mobile-menu-btn" 
+aria-label="Abrir men├║">
+                <a 
+href="#inicio">Inicio</a>
+                <a href="#
+nosotros">Nosotros</a>
+                <a 
+href="#servicios">Qu├® 
+hacemos</a>
+                <a href="#
+boletines">Boletines</a>
+                <a href="#
+memorias">Memorias</a>
+                <a 
+href="#contacto" class="bt
+n-primary">Contacto</a>
+                    <a 
+href="#contacto" 
+class="btn-primary 
+btn-large">├Ünete a la 
+red</a>
+                    <a 
+href="#nosotros" 
+class="btn-secondary 
+btn-large">Saber m├ís</a>
+            <div 
+class="gallery-item" 
+style="background-image: 
+url('img/gallery1.jpg')" 
+role="img" 
+aria-label="Actividad de 
+MONOCYL 1"></div>
+            <div 
+class="gallery-item" 
+style="background-image: 
+url('img/gallery2.jpg')" 
+role="img" 
+aria-label="Actividad de 
+MONOCYL 2"></div>
+            <div 
+class="gallery-item" 
+style="background-image: 
+url('img/gallery3.jpg')" 
+role="img" 
+aria-label="Actividad de 
+MONOCYL 3"></div>
+                    <a 
+href="#" class="logo 
+footer-logo">
+                        
+<a href="https://www.insta
+gram.com/monocyl/" 
+target="_blank" 
+rel="noopener" 
+aria-label="Instagram"><i 
+data-lucide="instagram"></
+i></a>
+                        
+<a href="https://www.faceb
+ook.com/MonoCyL/" 
+target="_blank" 
+rel="noopener" 
+aria-label="Facebook"><i d
+ata-lucide="facebook"></i>
+</a>
+                        
+<a href="https://www.tikto
+k.com/@monocyl11" 
+target="_blank" 
+rel="noopener" 
+aria-label="TikTok">
+                        
+<a href="https://x.com/mon
+ocyl" target="_blank" 
+rel="noopener" 
+aria-label="X (Twitter)">
+                        
+<a href="mailto:monocyl@ho
+tmail.com" 
+class="contact-link">
+                        
+<a 
+href="tel:+34620563068" 
+class="contact-link">
+                <p 
+style="margin-top: 
+1rem;"><a 
+href="aviso-legal.html" 
+style="text-decoration: 
+underline; opacity: 
+0.7;">Aviso Legal y 
+Privacidad</a></p>
+
+
