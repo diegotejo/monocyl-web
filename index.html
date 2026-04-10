@@ -58,8 +58,8 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="#" class="logo">
-                <span class="logo-mono">MONO</span><span class="logo-cyl">cyl</span>
+            <a href="#inicio" class="logo logo-button" aria-label="Ir al inicio">
+                <img src="img/Logo.png" alt="MONOCYL" class="logo-img">
             </a>
             
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menú">
@@ -196,6 +196,36 @@
             <div class="importance-text">
                 <p>Porque una familia <span class="text-highlight">monoparental</span> es una familia con plenos derechos, no una familia incompleta.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Documents Hub -->
+    <section class="documents-hub">
+        <div class="container">
+            <div class="documents-hub-inner">
+                <div class="documents-hub-copy">
+                    <p class="documents-kicker">Centro documental</p>
+                    <h2>Boletines, notas y memorias</h2>
+                    <p>Explora toda la documentación por tipo y año para localizar cada publicación en segundos.</p>
+                </div>
+                <div class="documents-filters" aria-label="Filtros de documentación">
+                    <label for="doc-type-filter">Tipo</label>
+                    <select id="doc-type-filter">
+                        <option value="all">Todo</option>
+                        <option value="boletines">Boletines</option>
+                        <option value="notas-prensa">Notas de prensa</option>
+                        <option value="memorias">Memorias</option>
+                    </select>
+
+                    <label for="doc-year-filter">Año</label>
+                    <select id="doc-year-filter">
+                        <option value="all">Todos</option>
+                    </select>
+
+                    <button id="doc-filter-reset" type="button" class="btn-secondary">Limpiar filtros</button>
+                </div>
+            </div>
+            <p id="documents-no-results" class="documents-no-results" hidden>No hay resultados con esos filtros. Prueba otro tipo o año.</p>
         </div>
     </section>
 

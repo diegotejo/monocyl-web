@@ -31,6 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Fetch and Render Newsletters
     const newslettersGrid = document.getElementById('newsletters-grid');
+    const docTypeFilter = document.getElementById('doc-type-filter');
+    const docYearFilter = document.getElementById('doc-year-filter');
+    const docFilterReset = document.getElementById('doc-filter-reset');
+    const docNoResults = document.getElementById('documents-no-results');
 
     // --- New Logic for Events Banner ---
     const newsTrigger = document.getElementById('news-trigger-container');
@@ -99,6 +103,68 @@ document.addEventListener('DOMContentLoaded', () => {
         return date.toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
     }
 
+    function getYearLabel(dateString, fallbackYear = '') {
+        const date = new Date(dateString);
+        if (Number.isNaN(date.getTime())) return fallbackYear;
+        return String(date.getFullYear());
+    }
+
+    function refreshDocumentYearOptions() {
+        if (!docYearFilter) return;
+
+        const previousValue = docYearFilter.value;
+        const years = [...new Set(
+            Array.from(document.querySelectorAll('.document-card'))
+                .map(card => card.dataset.docYear)
+                .filter(Boolean)
+        )].sort((a, b) => Number(b) - Number(a));
+
+        docYearFilter.innerHTML = '<option value="all">Todos</option>';
+        years.forEach(year => {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            docYearFilter.appendChild(option);
+        });
+
+        if (years.includes(previousValue)) {
+            docYearFilter.value = previousValue;
+        }
+    }
+
+    function applyDocumentFilters() {
+        const typeValue = docTypeFilter ? docTypeFilter.value : 'all';
+        const yearValue = docYearFilter ? docYearFilter.value : 'all';
+        let visibleCount = 0;
+
+        document.querySelectorAll('.document-card').forEach(card => {
+            const matchesType = typeValue === 'all' || card.dataset.docType === typeValue;
+            const matchesYear = yearValue === 'all' || card.dataset.docYear === yearValue;
+            const shouldShow = matchesType && matchesYear;
+            card.style.display = shouldShow ? '' : 'none';
+            if (shouldShow) visibleCount += 1;
+        });
+
+        if (docNoResults) {
+            docNoResults.hidden = visibleCount > 0;
+        }
+    }
+
+    function initializeDocumentFilters() {
+        if (!docTypeFilter || !docYearFilter) return;
+
+        docTypeFilter.addEventListener('change', applyDocumentFilters);
+        docYearFilter.addEventListener('change', applyDocumentFilters);
+
+        if (docFilterReset) {
+            docFilterReset.addEventListener('click', () => {
+                docTypeFilter.value = 'all';
+                docYearFilter.value = 'all';
+                applyDocumentFilters();
+            });
+        }
+    }
+
     // Helper to format date (moved outside to be shared)
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -129,7 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         newsletters.forEach(newsletter => {
             const card = document.createElement('article');
-            card.classList.add('newsletter-card');
+            card.classList.add('newsletter-card', 'document-card');
+            card.dataset.docType = 'boletines';
+            card.dataset.docYear = getYearLabel(newsletter.date);
             const bgImage = newsletter.coverImage || 'logo.png';
             const bgStyle = newsletter.coverImage
                 ? `background-image: url('${bgImage}'); background-size: cover; background-position: center;`
@@ -147,10 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
             newslettersGrid.appendChild(card);
         });
 
+        refreshDocumentYearOptions();
+        applyDocumentFilters();
         lucide.createIcons();
     }
 
     // Initialize
+    initializeDocumentFilters();
     fetchNewsletters();
     fetchEvents();
     fetchPressReleases();
@@ -181,7 +252,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         pressItems.forEach(item => {
             const card = document.createElement('article');
-            card.classList.add('newsletter-card', 'press-card');
+            card.classList.add('newsletter-card', 'press-card', 'document-card');
+            card.dataset.docType = 'notas-prensa';
+            card.dataset.docYear = getYearLabel(item.date);
 
             card.innerHTML = `
                 <div class="card-image" aria-hidden="true">
@@ -199,6 +272,8 @@ document.addEventListener('DOMContentLoaded', () => {
             container.appendChild(card);
         });
 
+        refreshDocumentYearOptions();
+        applyDocumentFilters();
         lucide.createIcons();
     }
 
@@ -227,7 +302,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         memorias.forEach(memoria => {
             const card = document.createElement('article');
-            card.classList.add('newsletter-card', 'memoria-card');
+            card.classList.add('newsletter-card', 'memoria-card', 'document-card');
+            card.dataset.docType = 'memorias';
+            card.dataset.docYear = memoria.year || getYearLabel(memoria.date);
 
             // Creating a special background for Memorias: Logo + Year text
             // We use a CSS layout for this in the card innerHTML
@@ -246,6 +323,8 @@ document.addEventListener('DOMContentLoaded', () => {
             container.appendChild(card);
         });
 
+        refreshDocumentYearOptions();
+        applyDocumentFilters();
         lucide.createIcons();
     }
 });
