@@ -290,12 +290,12 @@ h1, h2, h3, h4 {
 }
 
 .navbar .logo-script {
-    color: #101315;
+    color: var(--clr-purple);
     font-family: 'Caveat', cursive;
     font-size: 3rem;
     font-weight: 700;
     margin-left: -0.55rem;
-    transform: translate(-0.05rem, 0.56rem) rotate(-6deg);
+    transform: translate(-0.05rem, 0.42rem) rotate(-6deg);
     line-height: 0.78;
     transition: transform 0.25s ease;
 }
@@ -312,7 +312,7 @@ h1, h2, h3, h4 {
 
 .navbar .logo-button:hover .logo-script,
 .navbar .logo-button:focus-visible .logo-script {
-    transform: translate(-0.03rem, 0.5rem) rotate(-4deg);
+    transform: translate(-0.03rem, 0.36rem) rotate(-4deg);
 }
 
 .navbar .logo-button:hover .logo-orbit,
@@ -1499,7 +1499,7 @@ h1, h2, h3, h4 {
 
     .navbar .logo-script {
         font-size: 2.65rem;
-        transform: translate(-0.04rem, 0.5rem) rotate(-6deg);
+        transform: translate(-0.04rem, 0.4rem) rotate(-6deg);
     }
 
     .navbar .logo-tagline {
@@ -1562,7 +1562,7 @@ h1, h2, h3, h4 {
     .navbar .logo-script {
         font-size: 2.35rem;
         margin-left: -0.42rem;
-        transform: translate(0, 0.46rem) rotate(-6deg);
+        transform: translate(0, 0.3rem) rotate(-6deg);
     }
 
     .navbar .logo-tagline {
