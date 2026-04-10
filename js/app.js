@@ -32,10 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Fetch and Render Newsletters
     const newslettersGrid = document.getElementById('newsletters-grid');
 
-    async function fetchNewsletters() {
-        // ... (existing code replaced below for brevity in multi-step but I'll update the whole section)
-    }
-
     // --- New Logic for Events Banner ---
     const newsTrigger = document.getElementById('news-trigger-container');
     const newsOverlay = document.getElementById('news-overlay');
@@ -150,14 +146,63 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             newslettersGrid.appendChild(card);
         });
+
+        lucide.createIcons();
     }
 
     // Initialize
     fetchNewsletters();
     fetchEvents();
+    fetchPressReleases();
     fetchMemorias();
 
-    // 3. Fetch and Render Memorias
+    // 3. Fetch and Render Press Releases
+    async function fetchPressReleases() {
+        const pressGrid = document.getElementById('press-grid');
+        if (!pressGrid) return;
+
+        try {
+            const response = await fetch('data/notas-prensa.json');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const pressItems = await response.json();
+            renderPressReleases(pressItems, pressGrid);
+        } catch (error) {
+            console.error('Error fetching press releases:', error);
+            pressGrid.innerHTML = `<div class="error-state"><p>No se pudieron cargar las notas de prensa.</p></div>`;
+        }
+    }
+
+    function renderPressReleases(pressItems, container) {
+        container.innerHTML = '';
+        if (pressItems.length === 0) {
+            container.innerHTML = '<p style="text-align:center; grid-column: 1/-1;">No hay notas de prensa disponibles.</p>';
+            return;
+        }
+
+        pressItems.forEach(item => {
+            const card = document.createElement('article');
+            card.classList.add('newsletter-card', 'press-card');
+
+            card.innerHTML = `
+                <div class="card-image" aria-hidden="true">
+                    <div class="doc-placeholder"><i data-lucide="newspaper"></i></div>
+                </div>
+                <div class="card-content">
+                    <span class="press-chip">Nota de prensa</span>
+                    <span class="card-date">${formatDate(item.date)}</span>
+                    <h3 class="card-title">${item.title}</h3>
+                    <p class="card-excerpt">${item.excerpt}</p>
+                    <a href="${item.link}" target="_blank" rel="noopener" class="read-more" aria-label="Abrir ${item.title}">Abrir PDF</a>
+                </div>
+            `;
+
+            container.appendChild(card);
+        });
+
+        lucide.createIcons();
+    }
+
+    // 4. Fetch and Render Memorias
     async function fetchMemorias() {
         const memoriasGrid = document.getElementById('memorias-grid');
         if (!memoriasGrid) return;
@@ -200,5 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             container.appendChild(card);
         });
+
+        lucide.createIcons();
     }
 });

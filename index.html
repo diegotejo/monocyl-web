@@ -68,9 +68,10 @@
             
             <div class="nav-links" id="nav-links">
                 <a href="#inicio">Inicio</a>
-                <a href="#nosotros">Nosotros</a>
+                <a href="#nosotros">Nosotr@s</a>
                 <a href="#servicios">Qué hacemos</a>
                 <a href="#boletines">Boletines</a>
+                <a href="#notas-prensa">Notas de prensa</a>
                 <a href="#memorias">Memorias</a>
                 <a href="#contacto" class="btn-primary">Contacto</a>
             </div>
@@ -159,6 +160,24 @@
                     <p>Actividades culturales y recreativas diseñadas para que grandes y pequeñ@s disfruten junt@s.</p>
                 </div>
             </div>
+
+            <div class="services-resources">
+                <article class="resource-card">
+                    <div class="resource-icon"><i data-lucide="file-text"></i></div>
+                    <div class="resource-copy">
+                        <h3>Guía de información MONO</h3>
+                        <p>Consulta y descarga el documento con recursos, contexto y claves sobre la realidad de las familias monoparentales.</p>
+                    </div>
+                    <a href="pdfs/documentos/INFORMACIÓN MONO.pdf" target="_blank" class="btn-secondary">Ver PDF</a>
+                </article>
+
+                <article class="social-poster-mini" aria-label="Cartel MONO 2026 para redes sociales">
+                    <a href="pdfs/documentos/Cartel MONO 2026 - RRSS.jpeg" target="_blank" rel="noopener">
+                        <img src="pdfs/documentos/Cartel MONO 2026 - RRSS.jpeg" alt="Cartel MONO 2026 para redes sociales">
+                        <span>Cartel RRSS 2026</span>
+                    </a>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -181,7 +200,7 @@
     </section>
 
     <!-- Newsletters Section -->
-    <section id="boletines" class="newsletters-section">
+    <section id="boletines" class="newsletters-section documents-section">
         <div class="container">
             <div class="section-header">
                 <div class="underline"></div>
@@ -198,8 +217,25 @@
         </div>
     </section>
 
+    <!-- Press Releases Section -->
+    <section id="notas-prensa" class="press-section documents-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="underline"></div>
+                <h2>Notas de Prensa</h2>
+                <p>Impacto y presencia de MONOCYL en medios, eventos y acciones de visibilidad.</p>
+            </div>
+
+            <div id="press-grid" class="newsletters-grid">
+                <div class="loading" style="grid-column: 1/-1; text-align: center; padding: 3rem;">
+                    <p>Cargando notas de prensa...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Activity Reports Section (Memorias) -->
-    <section id="memorias" class="memorias-section">
+    <section id="memorias" class="memorias-section documents-section">
         <div class="container">
             <div class="section-header center-dark">
                 <div class="underline"></div>
@@ -226,14 +262,22 @@
                         <img src="img/Logo.png" alt="MONOCYL" class="footer-logo-img">
                     </a>
                     <p>Asociación de Familias Monoparentales de Castilla y León. Trabajando por la visibilidad y el apoyo mutuo.</p>
-                    <div class="social-links" style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-                        <a href="https://www.instagram.com/monocyl/" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                        <a href="https://www.facebook.com/MonoCyL/?locale=es_ES" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-                        <a href="https://www.tiktok.com/@monocyl11" target="_blank" rel="noopener" aria-label="TikTok">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 20px; height: 20px; fill: currentColor;"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/monocyl/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link-pill">
+                            <i data-lucide="instagram"></i>
+                            <span>Instagram</span>
                         </a>
-                        <a href="https://x.com/monocyl/" target="_blank" rel="noopener" aria-label="X (Twitter)">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="width: 20px; height: 20px; fill: currentColor;"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                        <a href="https://www.facebook.com/MonoCyL/?locale=es_ES" target="_blank" rel="noopener" aria-label="Facebook" class="social-link-pill">
+                            <i data-lucide="facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://www.tiktok.com/@monocyl11" target="_blank" rel="noopener" aria-label="TikTok" class="social-link-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                            <span>TikTok</span>
+                        </a>
+                        <a href="https://x.com/monocyl/" target="_blank" rel="noopener" aria-label="X" class="social-link-pill">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                            <span>X</span>
                         </a>
                     </div>
                 </div>

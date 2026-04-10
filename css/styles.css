@@ -601,6 +601,76 @@ h1, h2, h3, h4 {
     font-size: 1.1rem;
 }
 
+.services-resources {
+    margin-top: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: var(--spacing-md);
+    align-items: stretch;
+}
+
+.resource-card {
+    background: linear-gradient(120deg, #fff 0%, #fbf8f4 100%);
+    border: 1px solid rgba(99, 45, 98, 0.12);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 1.6rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: center;
+}
+
+.resource-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-yellow-light);
+    color: var(--clr-purple);
+}
+
+.resource-copy h3 {
+    color: var(--clr-text-main);
+    margin-bottom: 0.2rem;
+    font-size: 1.15rem;
+}
+
+.resource-copy p {
+    color: var(--clr-text-muted);
+    font-size: 1rem;
+}
+
+.social-poster-mini {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(99, 45, 98, 0.14);
+    box-shadow: var(--shadow-sm);
+    background: #fff;
+}
+
+.social-poster-mini a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.social-poster-mini img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.social-poster-mini span {
+    font-weight: 700;
+    color: var(--clr-purple);
+    font-size: 0.95rem;
+    padding: 0.75rem 0.9rem;
+    border-top: 1px solid rgba(99, 45, 98, 0.08);
+}
+
 /* ==========================================================================
    Importance Section (Por qué importa)
    ========================================================================== */
@@ -639,6 +709,15 @@ h1, h2, h3, h4 {
     background: var(--clr-surface);
 }
 
+.documents-section .section-header p {
+    max-width: 760px;
+}
+
+.press-section {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(180deg, #fff 0%, #f8f3ec 100%);
+}
+
 .newsletters-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -661,6 +740,10 @@ h1, h2, h3, h4 {
     box-shadow: var(--shadow-md);
 }
 
+.documents-section .newsletter-card {
+    border: 1px solid rgba(99, 45, 98, 0.1);
+}
+
 .card-image {
     height: 220px;
     background-size: cover;
@@ -673,6 +756,7 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    gap: 0.35rem;
 }
 
 .card-date {
@@ -705,6 +789,41 @@ h1, h2, h3, h4 {
     gap: 8px;
     padding-top: 1rem;
     border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.documents-section .read-more {
+    margin-top: auto;
+}
+
+.press-card .card-image {
+    background: linear-gradient(145deg, #fff9ed 0%, #f6efe5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-color: var(--clr-purple);
+}
+
+.press-chip {
+    background: var(--clr-purple);
+    color: #fff;
+    font-size: 0.72rem;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0.28rem 0.6rem;
+    width: fit-content;
+    margin-bottom: 0.4rem;
+}
+
+.doc-placeholder {
+    width: 68px;
+    height: 68px;
+    border-radius: 16px;
+    background: rgba(99, 45, 98, 0.08);
+    color: var(--clr-purple);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .read-more i {
@@ -864,6 +983,39 @@ h1, h2, h3, h4 {
     line-height: 1.6;
     max-width: 380px;
     margin-bottom: var(--spacing-md);
+}
+
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.social-link-pill i,
+.social-link-pill svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+    fill: currentColor;
+}
+
+.social-link-pill:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.18);
 }
 
 .contact-info {
@@ -1044,6 +1196,23 @@ h1, h2, h3, h4 {
     
     .importance-text {
         font-size: 1.2rem;
+    }
+
+    .services-resources {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .social-poster-mini img {
+        height: 190px;
+    }
+
+    .social-link-pill span {
+        font-size: 0.82rem;
     }
 }
 
