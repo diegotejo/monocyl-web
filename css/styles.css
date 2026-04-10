@@ -228,7 +228,7 @@ h1, h2, h3, h4 {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 0.2rem;
+    gap: 0.34rem;
     padding: 0.1rem 0;
     border-radius: 0;
     background: transparent;
@@ -254,7 +254,7 @@ h1, h2, h3, h4 {
     display: inline-flex;
     align-items: flex-end;
     line-height: 1;
-    padding-bottom: 0.35rem;
+    padding-bottom: 0.44rem;
 }
 
 .navbar .logo-word {
@@ -274,6 +274,7 @@ h1, h2, h3, h4 {
     transform: translateY(0.08rem);
     position: relative;
     flex-shrink: 0;
+    transition: transform 0.25s ease;
 }
 
 .navbar .logo-orbit-dot {
@@ -285,6 +286,7 @@ h1, h2, h3, h4 {
     right: 0.02rem;
     bottom: 0.05rem;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+    transition: transform 0.25s ease;
 }
 
 .navbar .logo-script {
@@ -293,8 +295,9 @@ h1, h2, h3, h4 {
     font-size: 3rem;
     font-weight: 700;
     margin-left: -0.55rem;
-    transform: translate(-0.05rem, 0.7rem) rotate(-6deg);
+    transform: translate(-0.05rem, 0.56rem) rotate(-6deg);
     line-height: 0.78;
+    transition: transform 0.25s ease;
 }
 
 .navbar .logo-tagline {
@@ -302,7 +305,33 @@ h1, h2, h3, h4 {
     font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-left: 0.03rem;
     white-space: nowrap;
+}
+
+.navbar .logo-button:hover .logo-script,
+.navbar .logo-button:focus-visible .logo-script {
+    transform: translate(-0.03rem, 0.5rem) rotate(-4deg);
+}
+
+.navbar .logo-button:hover .logo-orbit,
+.navbar .logo-button:focus-visible .logo-orbit {
+    transform: translateY(0.08rem) rotate(8deg);
+}
+
+.navbar .logo-button:hover .logo-orbit-dot,
+.navbar .logo-button:focus-visible .logo-orbit-dot {
+    animation: logo-dot-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes logo-dot-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.16);
+    }
 }
 
 .logo-mono {
@@ -1463,6 +1492,19 @@ h1, h2, h3, h4 {
         grid-template-columns: 1fr;
         align-items: stretch;
     }
+
+    .navbar .logo-word {
+        font-size: 1.8rem;
+    }
+
+    .navbar .logo-script {
+        font-size: 2.65rem;
+        transform: translate(-0.04rem, 0.5rem) rotate(-6deg);
+    }
+
+    .navbar .logo-tagline {
+        font-size: 0.65rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1488,6 +1530,47 @@ h1, h2, h3, h4 {
     
     .mobile-menu-btn {
         display: block;
+    }
+
+    .navbar .logo-button {
+        gap: 0.2rem;
+    }
+
+    .navbar .logo-wordmark {
+        padding-bottom: 0.3rem;
+    }
+
+    .navbar .logo-word {
+        font-size: 1.58rem;
+        letter-spacing: 0.07em;
+    }
+
+    .navbar .logo-orbit {
+        width: 1.42rem;
+        height: 1.42rem;
+        border-width: 0.31rem;
+        margin-left: -0.35rem;
+    }
+
+    .navbar .logo-orbit-dot {
+        width: 0.62rem;
+        height: 0.62rem;
+        right: 0.02rem;
+        bottom: 0.03rem;
+    }
+
+    .navbar .logo-script {
+        font-size: 2.35rem;
+        margin-left: -0.42rem;
+        transform: translate(0, 0.46rem) rotate(-6deg);
+    }
+
+    .navbar .logo-tagline {
+        font-size: 0.56rem;
+        line-height: 1.25;
+        letter-spacing: 0.015em;
+        white-space: normal;
+        max-width: 180px;
     }
     
     .cta-content h2 {
@@ -1544,6 +1627,16 @@ h1, h2, h3, h4 {
         font-size: 1rem;
         max-width: 100%;
         padding-right: 4rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar .logo-button,
+    .navbar .logo-script,
+    .navbar .logo-orbit,
+    .navbar .logo-orbit-dot {
+        transition: none;
+        animation: none;
     }
 }
 
