@@ -224,23 +224,21 @@ h1, h2, h3, h4 {
 }
 
 .navbar .logo-button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+    gap: 0.08rem;
     padding: 0.1rem 0;
     border-radius: 0;
     background: transparent;
     border: 0;
     box-shadow: none;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .navbar .logo-button:hover {
     transform: translateY(-1px);
-    opacity: 1;
-}
-
-.navbar .logo-button:hover .logo-img,
-.navbar .logo-button:focus-visible .logo-img {
-    opacity: 1;
 }
 
 .navbar .logo-button:focus-visible {
@@ -248,17 +246,63 @@ h1, h2, h3, h4 {
     outline-offset: 2px;
 }
 
-.navbar .logo-img {
-    width: auto;
-    height: 30px;
-    max-width: 150px;
-    object-fit: contain;
-    opacity: 0.84;
-    filter: saturate(1.06) contrast(1.02);
-}
-
 .navbar.scrolled .logo-button {
     background: transparent;
+}
+
+.navbar .logo-wordmark {
+    display: inline-flex;
+    align-items: flex-end;
+    line-height: 1;
+}
+
+.navbar .logo-word {
+    color: #111416;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: 0.09em;
+}
+
+.navbar .logo-orbit {
+    width: 1.9rem;
+    height: 1.9rem;
+    border: 0.42rem solid var(--clr-purple);
+    border-radius: 50%;
+    margin-left: -0.45rem;
+    margin-right: -0.1rem;
+    transform: translateY(0.08rem);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.navbar .logo-orbit-dot {
+    width: 0.86rem;
+    height: 0.86rem;
+    border-radius: 50%;
+    background: var(--clr-yellow);
+    position: absolute;
+    right: 0.02rem;
+    bottom: 0.05rem;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+.navbar .logo-script {
+    color: #101315;
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-left: -0.55rem;
+    transform: translate(-0.05rem, 0.95rem) rotate(-6deg);
+    line-height: 0.78;
+}
+
+.navbar .logo-tagline {
+    color: rgba(99, 45, 98, 0.88);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: lowercase;
+    white-space: nowrap;
 }
 
 .logo-mono {
