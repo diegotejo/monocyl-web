@@ -172,6 +172,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return date.toLocaleDateString('es-ES', options);
     };
 
+    const formatMonthLabel = (dateString) => {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('es-ES', { month: 'long' });
+    };
+
     // Update fetchNewsletters to use shared formatDate
     async function fetchNewsletters() {
         try {
@@ -199,12 +204,21 @@ document.addEventListener('DOMContentLoaded', () => {
             card.dataset.docType = 'boletines';
             card.dataset.docYear = getYearLabel(newsletter.date);
             const bgImage = newsletter.coverImage || 'logo.png';
-            const bgStyle = newsletter.coverImage
-                ? `background-image: url('${bgImage}'); background-size: cover; background-position: center;`
-                : `background-image: url('${bgImage}'); background-size: 55%; background-repeat: no-repeat; background-position: center; background-color: #F5EAE1;`;
+            const monthLabel = formatMonthLabel(newsletter.date);
+            const yearLabel = getYearLabel(newsletter.date);
+            const cardImageMarkup = newsletter.coverImage
+                ? `<div class="card-image newsletter-image-photo" style="background-image: url('${bgImage}');" aria-hidden="true"></div>`
+                : `
+                    <div class="card-image newsletter-image-art" aria-hidden="true">
+                        <div class="newsletter-ribbon">Boletin MONOCYL</div>
+                        <div class="newsletter-month">${monthLabel}</div>
+                        <div class="newsletter-year">${yearLabel}</div>
+                        <div class="newsletter-orb"></div>
+                    </div>
+                `;
 
             card.innerHTML = `
-                <div class="card-image" style="${bgStyle}" aria-hidden="true"></div>
+                ${cardImageMarkup}
                 <div class="card-content">
                     <span class="card-date">${formatDate(newsletter.date)}</span>
                     <h3 class="card-title">${newsletter.title}</h3>
@@ -255,9 +269,13 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.add('newsletter-card', 'press-card', 'document-card');
             card.dataset.docType = 'notas-prensa';
             card.dataset.docYear = getYearLabel(item.date);
+            const pressHeadline = item.title.length > 60 ? `${item.title.slice(0, 57)}...` : item.title;
 
             card.innerHTML = `
-                <div class="card-image" aria-hidden="true">
+                <div class="card-image press-image-art" aria-hidden="true">
+                    <div class="press-ribbon">Nota de prensa</div>
+                    <div class="press-main-title">${pressHeadline}</div>
+                    <div class="press-date-label">${formatDate(item.date)}</div>
                     <div class="doc-placeholder"><i data-lucide="newspaper"></i></div>
                 </div>
                 <div class="card-content">
