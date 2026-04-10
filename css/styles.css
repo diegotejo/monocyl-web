@@ -225,20 +225,22 @@ h1, h2, h3, h4 {
 
 .navbar .logo-button {
     justify-content: center;
-    padding: 0.42rem 0.9rem;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(99, 45, 98, 0.18);
-    box-shadow: 0 8px 24px rgba(99, 45, 98, 0.14);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    padding: 0.1rem 0;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .navbar .logo-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(99, 45, 98, 0.2);
-    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+    opacity: 1;
+}
+
+.navbar .logo-button:hover .logo-img,
+.navbar .logo-button:focus-visible .logo-img {
+    opacity: 1;
 }
 
 .navbar .logo-button:focus-visible {
@@ -248,14 +250,16 @@ h1, h2, h3, h4 {
 
 .navbar .logo-img {
     width: auto;
-    height: 38px;
-    max-width: 190px;
+    height: 30px;
+    max-width: 150px;
     object-fit: contain;
-    filter: saturate(1.08) contrast(1.03);
+    opacity: 0.88;
+    mix-blend-mode: multiply;
+    filter: saturate(1.06) contrast(1.02);
 }
 
 .navbar.scrolled .logo-button {
-    background: rgba(255, 255, 255, 0.95);
+    background: transparent;
 }
 
 .logo-mono {
