@@ -1,5 +1,21 @@
 [
   {
+    "id": 13,
+    "title": "Boletín Junio 2026",
+    "date": "2026-06-01",
+    "excerpt": "Novedades, encuentros de familias y actividades para el mes de junio.",
+    "link": "pdfs/boletines/06.BOLETIN MONOCYL JUNIO 26.pdf",
+    "coverImage": ""
+  },
+  {
+    "id": 12,
+    "title": "Boletín Mayo 2026",
+    "date": "2026-05-01",
+    "excerpt": "Novedades y actividades para el mes de mayo en MONOCYL Valladolid.",
+    "link": "pdfs/boletines/05.BOLETIN MONOCYL MAYO 26.pdf",
+    "coverImage": ""
+  },
+  {
     "id": 11,
     "title": "Boletín Abril 2026",
     "date": "2026-04-01",
